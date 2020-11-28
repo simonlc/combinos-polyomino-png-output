@@ -15,6 +15,38 @@ const canvas = createCanvas(canvasWidth, canvasHeight);
 const ctx = canvas.getContext('2d');
 console.log(`creating ${canvasWidth}x${canvasHeight} canvas`);
 
+const colors = [
+  '#ffffff',
+  '#efefef',
+  '#e7e7e7',
+  '#ffff8a',
+  '#dfdfdf',
+  '#c7e8f5',
+  '#fcc4be',
+  '#efd3ef',
+  '#ffec8a',
+  '#edbdeb',
+  '#cffdcf',
+  '#d7d7d7',
+  '#a7baf0',
+  '#ff8a8a',
+  '#8a8aff',
+  '#db9292',
+  '#c98a92',
+  '#8a8ac9',
+  '#ff8aff',
+  '#c48ac4',
+  '#e9c6e0',
+  '#ffca8a',
+  '#99dbd7',
+  '#dec78f',
+  '#ffa98a',
+  '#abe9e7',
+  '#d0b9e7',
+  '#ffd58a',
+  '#8aff8a',
+];
+
 ctx.font = 'bold 13px monospace';
 
 // Create background
@@ -32,7 +64,7 @@ function draw(polyomino, color, i) {
     boxHeight * cellSize,
   );
 
-  ctx.fillStyle = '#242424';
+  ctx.fillStyle = colors[color];
 
   ctx.fillText(
     (i + 1).toString().padStart(5, '0'),
